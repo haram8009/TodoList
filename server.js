@@ -18,6 +18,8 @@ app.use(
     secret: "비밀코드",
     store: MongoStore.create({
       mongoUrl: process.env.DB_URL,
+      autoRemove: "interval",
+      autoRemoveInterval: 10, // In minutes. Default
     }),
     cookie: { maxAge: 3.6e6 * 24 }, // 24시간 유효
     resave: false, // connect-mongo 사용시 false
@@ -31,7 +33,7 @@ var db;
 const MongoClient = require("mongodb").MongoClient;
 MongoClient.connect(
   process.env.DB_URL,
-  { useUnifiedTopology: true, useNewUrlParsar: true }, // warnning 메시지 줄여줌
+  { useUnifiedTopology: true }, // warnning 메시지 줄여줌
   (err, client) => {
     if (err) return console.log(err);
     db = client.db("todoapp");
@@ -88,7 +90,7 @@ app.post("/add", isLogin, (req, res) => {
 
 app.get("/list", isLogin, (req, res) => {
   db.collection("post")
-    .find()
+    .find({ writer: req.user._id })
     .toArray((err, result) => {
       if (err) console.log(err);
       // console.log(result);
@@ -258,8 +260,11 @@ app.get("/search", isLogin, (req, res) => {
         },
       },
     },
+    {
+      $match: { writer: req.user._id },
+    },
     { $sort: { _id: 1 } },
-    // { $limit: 10 },
+    { $limit: 10 },
     { $project: { title: 1, date: 1, _id: 0 } },
   ];
   db.collection("post")

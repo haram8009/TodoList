@@ -55,7 +55,7 @@
         e.preventDefault();
         var regType1 = /^[A-Za-z0-9]{4,12}$/;
         if (regType1.test($("#nickname").val())) {
-          return true;
+          return $("#register-form")[0].submit();
         }
         alert("닉네임이 조건에 맞지 않습니다");
       });
