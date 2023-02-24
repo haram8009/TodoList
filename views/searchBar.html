@@ -1,0 +1,22 @@
+<div class="container input-group mb-2">
+  <input class="form-control mr-3" id="search-input" />
+  <button class="input-group-append btn btn-danger" id="search">검색</button>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<script>
+  function handleSearch(e) {
+    let val = $("#search-input").val();
+    val = val.trim();
+    if (val.length <= 1) return alert("키워드를 충분히 입력하세요!");
+    window.location.replace("/search?value=" + val);
+  }
+  $("#search").click((e) => {
+    handleSearch(e);
+  });
+  $("#search-input").keydown((e) => {
+    if (e.key === "Enter") {
+      handleSearch(e);
+    }
+  });
+</script>
