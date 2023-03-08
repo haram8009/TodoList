@@ -56,7 +56,10 @@ Give an example
 
 ## Deployment
 
-Add additional notes about how to deploy this on a live system
+0308 deploy
+
+- 검색 기능
+- 닉네임 조건 변경, 안내 토글 추가
 
 ## Built With
 
