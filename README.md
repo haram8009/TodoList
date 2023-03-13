@@ -1,6 +1,6 @@
 # Todo List
 
-One Paragraph of project description goes here
+투두리스트 웹사이트입니다.
 
 ## Getting Started
 
@@ -8,7 +8,7 @@ you can access this website by this [Link](https://todoapp-8009.du.r.appspot.com
 
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
 
-### Prerequisites
+<!-- ### Prerequisites
 
 What things you need to install the software and how to install them
 
@@ -52,20 +52,21 @@ Explain what these tests test and why
 
 ```
 Give an example
-```
+``` -->
 
 ## Deployment
 
+v0.1.0
 0308 deploy
 
 - 검색 기능
 - 닉네임 조건 변경, 안내 토글 추가
 
-## Built With
+<!-- ## Built With
 
 - [Dropwizard](http://www.dropwizard.io/1.0.2/docs/) - The web framework used
 - [Maven](https://maven.apache.org/) - Dependency Management
-- [ROME](https://rometools.github.io/rome/) - Used to generate RSS Feeds
+- [ROME](https://rometools.github.io/rome/) - Used to generate RSS Feeds -->
 
 ## Contributing
 
@@ -73,7 +74,7 @@ Please read [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c6
 
 ## Versioning
 
-We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/your/project/tags).
+We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/haram8009/TodoList/tags).
 
 ## Authors
 
@@ -87,6 +88,5 @@ This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md
 
 ## Acknowledgments
 
-- Hat tip to anyone whose code was used
-- Inspiration
-- etc
+- Hat tip to 코딩애플😉
+- We used [PurpleBooth/README-Template.md](https://gist.github.com/PurpleBooth/109311bb0361f32d87a2)
